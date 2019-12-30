@@ -161,12 +161,12 @@ def zwaveEvent(hubitat.zwave.commands.basicv1.BasicSet cmd) {
 	if (cmd.value == 255) {
 		if (logEnable) log.debug "Double Up Triggered"
 		if (logDesc) log.info "$device.displayName had Doubletap up (button 1) [physical]"
-		result << createEvent([name: "doubleTapped", value: 1, descriptionText: "$device.displayName had Doubletap up (button 1) [physical]", type: "physical", isStateChange: true])
+		result << createEvent([name: "pushed", value: 1, descriptionText: "$device.displayName had Doubletap up (button 1) [physical]", type: "physical", isStateChange: true])
     }
 	else if (cmd.value == 0) {
 		if (logEnable) log.debug "Double Down Triggered"
 		if (logDesc) log.info "$device.displayName had Doubletap down (button 2) [physical]"
-		result << createEvent([name: "doubleTapped", value: 2, descriptionText: "$device.displayName had Doubletap down (button 2) [physical]", type: "physical", isStateChange: true])
+		result << createEvent([name: "pushed", value: 2, descriptionText: "$device.displayName had Doubletap down (button 2) [physical]", type: "physical", isStateChange: true])
     }
 
     return result
