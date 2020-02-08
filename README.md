@@ -1,3 +1,1 @@
-# Hubitat
-
-A collection of customized Hubitat Apps and Drivers. Most are for my private use, but can be freely used by others if found useful.
+Note from Joel:  I forked this repo, because Botched1 made great drivers for the GE switches and dimmers.
